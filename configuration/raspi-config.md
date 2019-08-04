@@ -1,6 +1,6 @@
 # raspi-config
 
-This page describes the console based raspi-config application. If you are using the Raspberry Pi desktop then you can use the graphical Raspberry Pi Configuration application from the Preferences menu to configure your Raspberry Pi.
+This page describes the console-based `raspi-config` application. If you are using the Raspberry Pi desktop, you can use the graphical Raspberry Pi Configuration application from the Preferences menu to configure your Raspberry Pi.
 
 `raspi-config` is the Raspberry Pi configuration tool originally written by [Alex Bradbury](https://github.com/asb). It targets Raspbian.
 
@@ -46,12 +46,12 @@ It has the following options available:
 
 Use the `up` and `down` arrow keys to move the highlighted selection between the options available. Pressing the `right` arrow key will jump out of the Options menu and take you to the `<Select>` and `<Finish>` buttons. Pressing `left` will take you back to the options. Alternatively, you can use the `Tab` key to switch between these.
 
-Note that in long lists of option values (like the list of timezone cities), you can also type a letter to skip to that section of the list. For example, entering `L` will skip you to Lisbon, just two options away from London, to save you scrolling all the way through the alphabet.
+Note that in long lists of option values (like the list of timezone cities), you can also type a letter to skip to that section of the list. For example, entering `L` in the list of cities will skip you to Lisbon, just two options away from London, to keep you from scrolling all the way through the alphabet.
 
 <a name="what-raspi-config-does"></a>
 ### What raspi-config does
 
-Generally speaking, `raspi-config` aims to provide the functionality to make the most common configuration changes. This may result in automated edits to `/boot/config.txt` and various standard Linux configuration files. Some options require a reboot to take effect. If you changed any of those, `raspi-config` will ask if you wish to reboot now when you select the `<Finish>` button.
+Generally speaking, `raspi-config` aims to help you make the most common configuration changes. These changes may result in automated edits to `/boot/config.txt` and various standard Linux configuration files. Some options require a reboot to take effect. If you changed any of those, `raspi-config` will ask if you wish to reboot now when you select the `<Finish>` button.
 
 <a name="menu-options"></a>
 ## Menu options
@@ -59,12 +59,12 @@ Generally speaking, `raspi-config` aims to provide the functionality to make the
 <a name="change-user-password"></a>
 ### Change User Password
 
-The default user on Raspbian is ```pi``` with the password ```raspberry```. You can change that here. Read about other [users](../linux/usage/users.md).
+The default user on Raspbian is ```pi``` with the password ```raspberry```. You can change that with this option. Read more about user management [here](../linux/usage/users.md).
  
 <a name="network-options"></a>
 ### Network Options
 
-From this submenu you can set the host name, your WiFi SSID, and pre-shared key, or enable/disable predictable network interface names.
+From this submenu, you can set the host name, your WiFi SSID, and pre-shared key, or enable/disable predictable network interface names.
 
 <a name="hostname"></a>
 #### Hostname
@@ -74,18 +74,18 @@ Set the visible name for this Pi on a network.
 <a name="boot-options"></a>
 ### Boot Options
 
-From here you can change what happens when your Pi boots. Use this option to change your boot preference to command line or desktop. You can choose whether boot-up waits for the network to be available, and whether the Plymouth splash screen is displayed at boot-up.
+From here, you can change what happens when your Pi boots. Use this option to change whether the Pi boots to the command line or the desktop, whether boot-up waits for the network to be available, and whether the Plymouth splash screen is displayed at boot-up.
 
 <a name="localisation-options"></a>
 ### Localisation Options
 
-The localisation submenu gives you these options to choose from: keyboard layout, time zone, locale, and WiFi country code. All options on these menus default to British or GB until you change them.
+The localisation submenu allows you to change the keyboard layout, time zone, locale, and WiFi country code. All options on these menus default to British or GB until you change them.
 
 #### Change locale
 Select a locale, for example `en_GB.UTF-8 UTF-8`.
 
 #### Change time zone
-Select your local time zone, starting with the region, e.g. Europe, then selecting a city, e.g. London. Type a letter to skip down the list to that point in the alphabet.
+Select your local time zone, starting with the region (e.g. Europe) and continuing with the city (e.g. London). Type a letter to skip down the list to that point in the alphabet.
 
 #### Change keyboard layout
 This option opens another menu which allows you to select your keyboard layout. It will take a long time to display while it reads all the keyboard types. Changes usually take effect immediately, but may require a reboot.
@@ -96,7 +96,7 @@ This option sets the country code for your WiFi network.
 <a name="interfacing-options"></a>
 ### Interfacing Options
 
-In this submenu there are the following options to enable/disable: Camera, SSH, VNC, SPI, I2C, Serial, 1-wire, and Remote GPIO.
+In this submenu, you can enable/disable the camera, SSH, VNC, SPI, I2C, Serial, 1-wire, and remote GPIO.
 
 <a name="camera"></a>
 #### Camera
@@ -118,7 +118,7 @@ Enable/disable the RealVNC virtual network computing server.
 <a name="spi"></a>
 #### SPI
 
-Enable/disable SPI interfaces and automatic loading of the SPI kernel module, needed for products such as PiFace.
+Enable/disable SPI interfaces and automatic loading of the SPI kernel module. SPI is needed for products such as PiFace.
 
 <a name="i2c"></a>
 #### I2C
@@ -138,7 +138,7 @@ Enable/disable the Dallas 1-wire interface. This is usually used for DS18B20 tem
 <a name="overclock"></a> 
 ### Overclock
 
-It is possible to overclock your Raspberry Pi's CPU. The default is 700MHz but it can be set up to 1000MHz. The overclocking you can achieve will vary; overclocking too high may result in instability. Selecting this option shows the following warning:
+It is possible to overclock your Raspberry Pi's CPU. The default clock speed is 700MHz, but it can be increased to 1000MHz. The overclocking you can achieve will vary; overclocking too high may result in instability. Selecting this option shows the following warning:
 
 **Be aware that overclocking may reduce the lifetime of your Raspberry Pi.** If overclocking at a certain level causes system instability, try a more modest overclock. Hold down the Shift key during boot to temporarily disable overclocking.
 
